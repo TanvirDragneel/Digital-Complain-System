@@ -14,7 +14,7 @@ class Complainbox extends Migration
     public function up()
     {
         //
-        Schema::create('complainboxs', function(Blueprint $table)
+        Schema::create('complainboxes', function(Blueprint $table)
         {
             $table->increments('id');
             $table->integer('category_id')->unsigned();

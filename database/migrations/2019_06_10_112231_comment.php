@@ -19,7 +19,7 @@ class Comment extends Migration
             $table->integer('user')->unsigned();
             $table->foreign('user')->references('id')->on('users');
             $table->integer('comp_id')->unsigned();
-            $table->foreign('comp_id')->references('id')->on('complainboxs');
+            $table->foreign('comp_id')->references('id')->on('complainboxes');
             $table->string('comp_comments', '100');
         });
     }

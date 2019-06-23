@@ -9,7 +9,7 @@
     <title>My Profile</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="{{asset('assets/css/main.css')}}" />
 </head>
 <body class="no-sidebar is-preload">
 <div id="page-wrapper">
@@ -57,7 +57,7 @@
 
             <!-- Content -->
             <article class="box post">
-                <a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
+                <a href="#" class="image featured"><img src="{{asset('images/pic01.jpg')}}" alt="" /></a>
                 <header>
                     <h2>My Profile</h2>
 
@@ -146,7 +146,7 @@
                         <header>
                             <h2>What's this all about?</h2>
                         </header>
-                        <a href="#" class="image featured"><img src="images/pic10.jpg" alt="" /></a>
+                        <a href="#" class="image featured"><img src="{{asset('images/pic10.jpg')}}" alt="" /></a>
                         <p>
                             This is <strong>Dopetrope</strong> a free, fully responsive HTML5 site template by
                             <a href="http://twitter.com/ajlkn">AJ</a> for <a href="http://html5up.net/">HTML5 UP</a> It's released for free under

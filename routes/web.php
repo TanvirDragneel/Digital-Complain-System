@@ -15,10 +15,18 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/editprofile/', function () {
-    return view('profile');
-});
+/*Route::get('/editprofile/{id}', 'profileController');*/
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/c',function () {
+   return view('complainbox.complainform');
+});
+Route::get('/index',function ()
+{
+    return view('index');
+});
+
+Route::resource('complain','complaincontroller');
+Route::resource('profile','profileController');
