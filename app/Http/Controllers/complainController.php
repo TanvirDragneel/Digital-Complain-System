@@ -2,11 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\category;
 use Illuminate\Http\Request;
 use App\complainbox;
 
+
 class complainController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +20,10 @@ class complainController extends Controller
      */
     public function index()
     {
-        return view('complainbox.complainform');
+        $catagorydata = category::all();
+        $catagorycount = category::all()->count();
+
+        return view('complainbox.complainform',compact('catagorydata'))->with('count',$catagorycount);
     }
 
     /**
@@ -22,9 +31,16 @@ class complainController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function allcomplains()
     {
         //
+        /*$allca = complainbox::all();*/
+        $cimplain_count = complainbox::all()->count();
+
+        $complains = complainbox::all();
+
+        return view('complainbox.all_complains',compact('complains'))->with('count',$cimplain_count);
+     //   return $all;
 
     }
 
@@ -40,6 +56,7 @@ class complainController extends Controller
 
         $complainbox = new complainbox([
             'category_id' => $request->get('catagory_id'),
+            'user_id' => $request->get('user_id'),
             'comp_title' => $request->get('title'),
             'comp_details' => $request->get('details'),
             'img_path' => 'none',
@@ -95,5 +112,14 @@ class complainController extends Controller
     public function destroy($id)
     {
         //
+    }
+    public function catagory_create(Request $request)
+    {
+        $categroy = new category([
+            'comp_category' => $request->get('category'),
+        ]);
+        $categroy->save();
+        return redirect()->route('category.create')->with('success','Category crated successfully');
+
     }
 }

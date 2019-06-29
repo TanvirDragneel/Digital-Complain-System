@@ -19,10 +19,13 @@ class Complainbox extends Migration
             $table->increments('id');
             $table->integer('category_id')->unsigned();
             $table->foreign('category_id')->references('id')->on('categories');
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
             $table->string('comp_title', '100');
-            $table->string('comp_details','500');
+            $table->text('comp_details');
             $table->string('img_path','255');
             $table->integer('judge_status');
+            $table->timestamps();
 
 
         });

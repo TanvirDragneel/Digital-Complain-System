@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\complainbox;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -23,6 +25,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $complain_data_by_user = complainbox::all()->where('user_id','=',Auth::id())->sortBy('judge_status');
+
+        return view('index')->with('cdata',$complain_data_by_user);
     }
 }
