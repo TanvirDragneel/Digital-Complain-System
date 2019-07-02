@@ -2,33 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f97b8c24-6286-4f82-8d8d-567824e73d4a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/categoryController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/judgecontroller.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/category.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/myfun.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fa/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fa/css/all.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fa/css/all.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fa/css/brands.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fa/css/brands.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fa/css/fontawesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fa/css/fontawesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fa/css/regular.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fa/css/regular.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fa/css/solid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fa/css/solid.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fa/css/svg-with-js.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fa/css/svg-with-js.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fa/css/v4-shims.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fa/css/v4-shims.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/judges.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/complainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/complainController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_06_10_110131_category.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_06_10_110131_category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/myfun.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/myfun.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -101,11 +76,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/category.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="132">
+              <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/myfun.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -179,6 +163,7 @@
         <option value="$PROJECT_DIR$/resources/views/layouts/master.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/index.blade.php" />
         <option value="$PROJECT_DIR$/app/category.php" />
+        <option value="$PROJECT_DIR$/app/myfun.php" />
       </list>
     </option>
   </component>
@@ -300,19 +285,6 @@
             <path>
               <item name="fullproject" type="b2602c69:ProjectViewProjectNode" />
               <item name="fullproject" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fullproject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fullproject" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fullproject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fullproject" type="462c0819:PsiDirectoryNode" />
               <item name="database" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -376,7 +348,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../laravel/myapps" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -459,7 +431,8 @@
       <workItem from="1561877620491" duration="478000" />
       <workItem from="1561954314839" duration="30000" />
       <workItem from="1562063244525" duration="2010000" />
-      <workItem from="1562065482113" duration="556000" />
+      <workItem from="1562065482113" duration="1527000" />
+      <workItem from="1562067444226" duration="165000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1561834701652</created>
@@ -468,19 +441,26 @@
       <option name="project" value="LOCAL" />
       <updated>1561834701652</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update">
+      <created>1562066057814</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1562066057814</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85131000" />
+    <option name="totallyTimeSpent" value="86267000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24466951" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24733475" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="GitHub Pull Requests" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -491,8 +471,9 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49924356" weight="0.4171181" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49924356" visible="true" weight="0.4171181" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50075644" side_tool="true" weight="0.32824427" />
+      <window_info anchor="bottom" id="GitHub Pull Requests" order="12" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -758,8 +739,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/category.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="132">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/myfun.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
         </state>
       </provider>
     </entry>
