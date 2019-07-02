@@ -70,7 +70,7 @@
                     <section class="last">
                         <i class="icon featured alt2 fa-star"></i>
                         <header>
-                            <h2>Judge Panel</h2>
+                            <h2><a href="{{route('judge')}}">Judge Panel</a></h2>
                         </header>
                         <p>Our honorable Judges to solve your problem</p>
                     </section>
@@ -114,7 +114,7 @@
                                     </p>
                                     <footer>
                                         <ul class="actions">
-                                            <li><a href="#" class="button alt">Continue reading...</a></li>
+                                            <li><a href="{{route('complain.show',[$data['id']])}}" class="button alt">Continue reading...</a></li>
                                             <li>{{$data->judge_status == '0' ? 'Pending':'Judged'}}</li>
                                         </ul>
                                     </footer>

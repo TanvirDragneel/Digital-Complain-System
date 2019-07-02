@@ -76,8 +76,8 @@ class complainController extends Controller
     {
 
         $showdata = complainbox::all()->where('id','=',$id);
-        //return redirect()->view('complainbox.complains', compact('showdata'));
-        return view('complainbox.complains',compact('showdata'));
+        //return redirect()->view('complainbox.complain', compact('showdata'));
+        return view('complainbox.complain',compact('showdata'));
     }
 
     /**

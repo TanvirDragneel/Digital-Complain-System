@@ -19,8 +19,8 @@ class Category extends Migration
             $table->increments('id');
             $table->string('comp_category','50');
             $table->text('cat_details');
-            $table->integer('judge_id')->unsigned();
-            $table->foreign('judge_id')->references('id')->on('users');
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
 
 
 

@@ -16,3 +16,4 @@ Route::resource('profile','profileController');
 
 /************Extra Route****************************/
 Route::get('/allcomplain','complaincontroller@allcomplains');
+Route::get('/judge','judgecontroller@index')->name('judge');
