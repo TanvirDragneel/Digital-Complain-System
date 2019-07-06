@@ -5,8 +5,7 @@
 
 @section('content')
     <div class="row">
-        <div class="col-4"></div>
-        <div class="col-8">
+        <div class="container">
 
             @if(\Session::has('success'))
                 <div class="alert alert-success">
@@ -14,49 +13,46 @@
 
                 </div>
 
-                @endif
+            @endif
             @if($count<0)
                 Please create a Category first.. <a href="{{route('category.index')}}">click here</a>
-                @else
-                        <form action="{{ url('complain') }}" method="POST">
-                            {{csrf_field()}}
-                            <table class="w-75 border">
-                                <input type="hidden" name="user_id" value="{{ \Illuminate\Support\Facades\Auth::id() }}">
-                                <tr>
-                                    <td>Catagory </td>
-                                    <td>
-                                        <select name="catagory_id" id="catagory_id" required>
-                                            <option value="">Select</option>
-                                           @foreach($catagorydata as $data)
-                                                <option value="{{$data['id']}}">{{$data['comp_category']}}</option>
+            @else
+                <div class="card" style="margin-left: 10%; margin-right: 10%; padding-left:10%; padding-top:2%; padding-bottom:2%; padding-right:10%; border-radius: 25px; box-shadow: 0px 4px 4px #999;">
+                <form action="{{ url('complain') }}" method="POST" class="form-group col-md-12 text-center">
+                    {{csrf_field()}}
+                    <input type="hidden" name="user_id" class="form-control"
+                           value="{{ \Illuminate\Support\Facades\Auth::id() }}">
+                    <br/>
 
-                                            @endforeach
+                    <label for="catagory_id"> <b>Category</b> </label>
+                    <select name="catagory_id" class="form-control" id="catagory_id" required>
+                        <option value="">Select</option>
+                        @foreach($catagorydata as $data)
+                            <option value="{{$data['id']}}">{{$data['comp_category']}}</option>
 
-                                        </select>
+                        @endforeach
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Title</td>
-                                    <td><input type="text" name="title" required> </td>
-                                </tr>
-                                <tr>
-                                    <td>Details</td>
-                                    <td><textarea name="details" id="" cols="30" rows="10" required></textarea> </td>
-                                </tr>
-                                <tr>
-                                    <td>Attatch image(optional)</td>
-                                    <td><input type="file"> </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2" align="center">
-                                        <input type="submit" name="submit" value="Submit">
-                                    </td>
-                                </tr>
-                            </table>
+                    </select>
+                    <br/>
 
-                        </form>
-                @endif
+                    <label for="title"> <b>Complain Title</b>  </label>
+                    <input type="text" class="form-control" name="title" required>
+                    <br/>
+
+                    <label for="details"> <b>Complain Details</b> </label>
+                    <textarea name="details" class="form-control" id="" cols="30" rows="10" required></textarea>
+                    <br/>
+
+                    <label for="file"> <b>Attach File</b> </label>
+                    <input type="file" name="file" class="form-control">
+                    <br/>
+
+                    <Button type="submit" class="btn btn-primary col-md-4" name="submit">Submit</Button>
+
+
+                </form>
+                </div>
+            @endif
         </div>
 
     </div>

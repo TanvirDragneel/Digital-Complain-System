@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\category;
+use App\comment;
 use Illuminate\Http\Request;
 use App\complainbox;
 
@@ -31,16 +32,19 @@ class complainController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function allcomplains()
+
+
+    public function comment(Request $request)
     {
-        //
-        /*$allca = complainbox::all();*/
-        $cimplain_count = complainbox::all()->count();
 
-        $complains = complainbox::all();
 
-        return view('complainbox.all_complains',compact('complains'))->with('count',$cimplain_count);
-     //   return $all;
+        $comment = new comment([
+        'user' => $request->get('userid'),
+        'comp_id'=> $request->get('complainid'),
+        'comp_comments'=> $request->get('comment'),
+    ]);
+        $comment->save();
+        return redirect()->route('complain.show',[$request->get('complainid')]);
 
     }
 
@@ -76,8 +80,8 @@ class complainController extends Controller
     {
 
         $showdata = complainbox::all()->where('id','=',$id);
-        //return redirect()->view('complainbox.complain', compact('showdata'));
-        return view('complainbox.complain',compact('showdata'));
+        $commentdata = comment::all()->where('comp_id','=',$id);
+        return view('complainbox.complain',compact('showdata'))->with('comments',$commentdata);
     }
 
     /**

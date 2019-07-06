@@ -52,7 +52,7 @@
                     <section class="first">
                         <i class="icon featured fa-cog"></i>
                         <header>
-                            <h2><a href="{{route('profile.show',['1'])}}">My Profile</a></h2>
+                            <h2><a href="{{route('profile.index')}}">My Profile</a></h2>
                         </header>
                         <p>Edit your profile and update your profile</p>
                     </section>
@@ -105,7 +105,7 @@
                         <div class="row">@foreach($cdata as $data)
                             <div class="col-4 col-6-medium col-12-small">
                                 <section class="box">
-                                    <a href="#" class="image featured"><img src="{{asset('images/pic02.jpg')}}" alt="" /></a>
+                                    <a href="#" class="image featured"><img src="{{asset('images/pic01.jpg')}}" alt="" /></a>
                                     <header>
                                         <h3>{{$data['comp_title']}} </h3> <small>Category:: {{$data->category->comp_category}}</small>
                                     </header>
@@ -115,7 +115,7 @@
                                     <footer>
                                         <ul class="actions">
                                             <li><a href="{{route('complain.show',[$data['id']])}}" class="button alt">Continue reading...</a></li>
-                                            <li>{{$data->judge_status == '0' ? 'Pending':'Judged'}}</li>
+                                            <li>{{$data->judge_status == '0' ? 'Pending':'Solved'}}</li>
                                         </ul>
                                     </footer>
                                 </section>
@@ -142,61 +142,61 @@
                 <div class="col-4 col-6-medium col-12-small">
                     <section>
                         <header>
-                            <h2>Tempus consequat</h2>
+                            <h2>Things you need to know</h2>
                         </header>
                         <ul class="divided">
-                            <li><a href="#">Lorem ipsum dolor sit amet sit veroeros</a></li>
-                            <li><a href="#">Sed et blandit consequat sed tlorem blandit</a></li>
-                            <li><a href="#">Adipiscing feugiat phasellus sed tempus</a></li>
-                            <li><a href="#">Hendrerit tortor vitae mattis tempor sapien</a></li>
-                            <li><a href="#">Sem feugiat sapien id suscipit magna felis nec</a></li>
-                            <li><a href="#">Elit class aptent taciti sociosqu ad litora</a></li>
+                            <li> <b>Digital Complain System</b> is a website for... </li>
+                            <li>1.Reaching your voice to the right authority .</li>
+                            <li>2.Providing Safe and secured Problem solving way. </li>
+                            <li>3.We make sure to hide and secure the users personal information from other users </li>
+                            <li>4.helping the authority to take steps as soon as the crime or problem emerges </li>
+                            <li>5.helping to have a healthy and secured work</li>
                         </ul>
                     </section>
                 </div>
                 <div class="col-4 col-6-medium col-12-small">
                     <section>
                         <header>
-                            <h2>Ipsum et phasellus</h2>
+                            <h2>Credits</h2>
                         </header>
                         <ul class="divided">
-                            <li><a href="#">Lorem ipsum dolor sit amet sit veroeros</a></li>
-                            <li><a href="#">Sed et blandit consequat sed tlorem blandit</a></li>
-                            <li><a href="#">Adipiscing feugiat phasellus sed tempus</a></li>
-                            <li><a href="#">Hendrerit tortor vitae mattis tempor sapien</a></li>
-                            <li><a href="#">Sem feugiat sapien id suscipit magna felis nec</a></li>
-                            <li><a href="#">Elit class aptent taciti sociosqu ad litora</a></li>
+                            <li> <b> <u>Course Mentor</u></b> </li>
+                            <li> MD Masum , Professor,CSE ,SUST</li>
+                            <li><b> <u>Advisor</u> </b> </li>
+                            <li>Ripul Sir, Associate Professor,CSE, SUST</li>
+                            <li>Moqsadur Rahman, Lecturer, CSE, SUST</li>
+
                         </ul>
                     </section>
                 </div>
                 <div class="col-4 col-12-medium">
                     <section>
                         <header>
-                            <h2>Vitae tempor lorem</h2>
+                            <h2>Social Links</h2>
                         </header>
                         <ul class="social">
-                            <li><a class="icon fa-facebook" href="#"><span class="label">Facebook</span></a></li>
+                            <li><a class="icon fa-facebook" href="https://www.facebook.com/mdtanvir.hossain.182"><span class="label">Facebook</span></a></li>
                             <li><a class="icon fa-twitter" href="#"><span class="label">Twitter</span></a></li>
                             <li><a class="icon fa-dribbble" href="#"><span class="label">Dribbble</span></a></li>
-                            <li><a class="icon fa-tumblr" href="#"><span class="label">Tumblr</span></a></li>
+                            <li><a class="icon fa-tumblr" href="https://www.tumblr.com/blog/tanvirdragneel"><span class="label">Tumblr</span></a></li>
                             <li><a class="icon fa-linkedin" href="#"><span class="label">LinkedIn</span></a></li>
                         </ul>
                         <ul class="contact">
                             <li>
                                 <h3>Address</h3>
                                 <p>
-                                    Untitled Incorporated<br />
-                                    1234 Somewhere Road Suite<br />
-                                    Nashville, TN 00000-0000
+                                    Shahjalal University of Science and Technology<br />
+                                    Akhalia, Sylhet<br />
+                                    In the wonderful Bangladesh
                                 </p>
                             </li>
                             <li>
                                 <h3>Mail</h3>
-                                <p><a href="#">someone@untitled.tld</a></p>
+                                <p><a href="tanvirhossaininfinity@gmail.com">tanvirhossaininfinity@gmail.com</a></p>
                             </li>
                             <li>
                                 <h3>Phone</h3>
-                                <p>(800) 000-0000</p>
+                                <p>01521206138</p>
                             </li>
                         </ul>
                     </section>
@@ -206,7 +206,7 @@
                     <!-- Copyright -->
                     <div id="copyright">
                         <ul class="links">
-                            <li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                            <li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="www.facebook.com/mdtanvir.hossain.182">Tanvir's Lair</a></li>
                         </ul>
                     </div>
 

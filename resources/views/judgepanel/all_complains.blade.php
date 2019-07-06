@@ -14,7 +14,7 @@
                 <tr>
                     <td>    {{$complain->id}}                                                   </td>
                     <td>    {{$complain->category->comp_category }}                             </td>
-                    <td>    {{$complain->comp_title}}                                           </td>
+                    <td><a href="{{route('complain.show',[$complain->id])}}">    {{$complain->comp_title}}</a>                                           </td>
                     <td>    {{$complain->judge_status == '0' ? 'Pending':'Done' }}              </td>
 
 

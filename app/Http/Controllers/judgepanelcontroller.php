@@ -3,14 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
+use App\complainbox;
 
-class profileController extends Controller
+class judgepanelcontroller extends Controller
 {
 
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('judge');
     }
     /**
      * Display a listing of the resource.
@@ -20,8 +20,11 @@ class profileController extends Controller
     public function index()
     {
         //
-        $profile_data= \App\User::all()->where('id','=',Auth::id());
-        return view('profile',compact('profile_data'));
+        $cimplain_count = complainbox::all()->count();
+
+        $complains = complainbox::all();
+
+        return view('judgepanel.all_complains',compact('complains'))->with('count',$cimplain_count);
     }
 
     /**
@@ -45,11 +48,15 @@ class profileController extends Controller
         //
     }
 
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
     public function show($id)
     {
         //
-
-
     }
 
     /**

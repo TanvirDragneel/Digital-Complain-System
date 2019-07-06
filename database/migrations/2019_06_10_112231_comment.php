@@ -14,13 +14,13 @@ class Comment extends Migration
     public function up()
     {
         //
-        Schema::create('Comnments', function (Blueprint $table) {
+        Schema::create('Comments', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user')->unsigned();
             $table->foreign('user')->references('id')->on('users');
             $table->integer('comp_id')->unsigned();
             $table->foreign('comp_id')->references('id')->on('complainboxes');
-            $table->string('comp_comments', '100');
+            $table->text('comp_comments');
         });
     }
 
