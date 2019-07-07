@@ -3,7 +3,7 @@
 
     @if(empty($judges))
         No Judge found
-        @else
+    @else
         <table class="table">
             <thead class="thead-dark">
             <tr>
@@ -15,18 +15,19 @@
             </thead>
             <tbody>
             @foreach($judges as $judge)
-            <tr>
-                <td>{{$judge->users->name}}</td>
-                <td>{{$judge->users->email}}</td>
-                <td>{{$judge->users->phone}}</td>
-                <td>{{ $judge->comp_category}}</td>
-            </tr>
+                <tr>
+
+                    <td>{{$judge->users['0']['name']}}</td>
+                    <td>{{$judge->users['0']['email']}}</td>
+                    <td>{{$judge->users['0']['phone']}}</td>
+                    <td>{{ $judge->comp_category}}</td>
+                </tr>
             @endforeach
 
             </tbody>
         </table>
-    @endif
+        @endif
 
     @endsection
 
-</section>
+

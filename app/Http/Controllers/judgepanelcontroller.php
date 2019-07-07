@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\category;
 use Illuminate\Http\Request;
 use App\complainbox;
+use Illuminate\Support\Facades\Auth;
 
 class judgepanelcontroller extends Controller
 {
@@ -21,8 +23,8 @@ class judgepanelcontroller extends Controller
     {
         //
         $cimplain_count = complainbox::all()->count();
-
-        $complains = complainbox::all();
+        $id =Auth::id();
+        $complains = category::all()->where('user_id','=',$id);
 
         return view('judgepanel.all_complains',compact('complains'))->with('count',$cimplain_count);
     }

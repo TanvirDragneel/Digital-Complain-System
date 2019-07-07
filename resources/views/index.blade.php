@@ -1,3 +1,5 @@
+@extends('layouts.master')
+    @section('content')
 <!DOCTYPE HTML>
 <!--
 	Dopetrope by HTML5 UP
@@ -9,7 +11,7 @@
     <title>Digital complain system</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="{{asset('assets/css/main.css')}}" />
+
 </head>
 <body class="homepage is-preload">
 <div id="page-wrapper">
@@ -135,7 +137,7 @@
     </section>
 
     <!-- Footer -->
-    <section id="footer">
+    <section style="background: #1b1e21" id="footer">
         <div class="container">
             <div class="row">
 
@@ -227,3 +229,4 @@
 
 </body>
 </html>
+@endsection

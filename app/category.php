@@ -2,13 +2,13 @@
 
 namespace App;
 
-    use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Model;
 
 class category extends Model
 {
     public function users()
     {
-        return $this->hasOne('App\User','id');
+        return $this->hasMany('App\User','id','user_id');
     }
 
     //

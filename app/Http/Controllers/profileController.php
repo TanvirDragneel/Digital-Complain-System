@@ -61,6 +61,7 @@ class profileController extends Controller
     public function edit($id)
     {
         //
+
     }
 
     /**
@@ -73,6 +74,20 @@ class profileController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $flight = \App\User::find($id);
+
+        $flight->name           = $request->get('name');
+
+        $flight->email          = $request->get('email');
+        $flight->phone          = $request->get('phone');
+
+        $flight->section        = $request->get('section');
+        $flight->roll           = $request->get('roll');
+        $flight->presence       = '1';
+        $flight->unique_id      = '001';
+
+
+        $flight->save();
     }
 
     /**

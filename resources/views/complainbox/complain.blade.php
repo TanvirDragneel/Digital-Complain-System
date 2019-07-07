@@ -53,7 +53,7 @@
                 <p>No comment found</p>
                 @else
                @foreach($comments as $c)
-                    >> {{$c->users[0]['name']}} <br>
+                    >> {{$c->users['name']}} <br>
                     >>>>{{$c->comp_comments}} <br>
                 @endforeach
                 @endif
