@@ -16,6 +16,7 @@ Route::resource('judgepanel','judgepanelcontroller');
 
 
 /************Extra Route****************************/
-Route::get('/allcomplain','complaincontroller@allcomplains');
+Route::post('/profile/{myupdate}','profileController@myupdate')->name('profile.myupdate');
 Route::get('/judge','judgecontroller@index')->name('judge');
 Route::post('/comment','complaincontroller@comment')->name('comment');
+Route::post('/status','complaincontroller@status')->name('status');

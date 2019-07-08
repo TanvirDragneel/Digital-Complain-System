@@ -71,23 +71,19 @@ class profileController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function myupdate(Request $request, $myupdate)
     {
         //
+        $id = $myupdate;
         $flight = \App\User::find($id);
-
         $flight->name           = $request->get('name');
-
         $flight->email          = $request->get('email');
         $flight->phone          = $request->get('phone');
-
-        $flight->section        = $request->get('section');
-        $flight->roll           = $request->get('roll');
-        $flight->presence       = '1';
-        $flight->unique_id      = '001';
-
-
         $flight->save();
+
+
+        $profile_data= \App\User::all()->where('id','=',Auth::id());
+        return redirect()->route('profile.index')->with('message','Successfully Updated');
     }
 
     /**

@@ -29,46 +29,56 @@
     </section>
 
     <!-- Main -->
-    <section id="main">
-        <div class="container">
 
-            <!-- Content -->
-            <article class="box post">
+            <section id="main">
+                <div class="container">
 
-                @foreach($showdata as $data)
-                <a href="#" class="image featured"><img src="{{asset('images/pic01.jpg')}}" alt="" /></a>
+                    <!-- Content -->
+                    <article class="box post">
 
+                        @foreach($showdata as $data)
+                            <img src="{{URL::to($data['img_path'])}}" alt="" style="height: 300px; width:300px;"/>
 
-                <section>
-                    <header>
-                        <h3>{{$data['comp_title']}}</h3>
-                    </header>
-                    <p>
-                       {{$data['comp_details']}}
-                    </p>
-                </section>
-            </article>
-            {{--show commment----------------}}
-            @if(empty($comments))
-                <p>No comment found</p>
-                @else
-               @foreach($comments as $c)
-                    >> {{$c->users['name']}} <br>
-                    >>>>{{$c->comp_comments}} <br>
+                        <section>
+                            <header>
+                                <h3>{{$data['comp_title']}}  @if(\Illuminate\Support\Facades\Auth::user()->permission > 1)
+                                        <form action="{{route('status')}}" method="post">
+                                            @csrf
+                                            <input type="hidden" name="status" id="status" value="1">
+                                            <input type="hidden" name="id" id="id" value="{{$data['id']}}">
+                                            <input type="submit" value="Set as Solved">
+                                        </form>
+                                @endif
+                                </h3>
+                                <b>{{$data->judge_status == '0' ? 'Pending':'Solved'}}</b>
+                            </header>
+                            <p>
+                               {{$data['comp_details']}}
+                            </p>
+                        </section>
+                    </article>
+                    {{--show commment----------------}}
+                    @if(empty($comments))
+                        <p>No comment found</p>
+                        @else
+                       @foreach($comments as $c)
+                            >> {{$c->users['name']}} <br>
+                            >>>>{{$c->comp_comments}} <br>
+                        @endforeach
+                        @endif
+
+                    {{------------------submit comment---------------------}}
+                    <form action="{{route('comment')}}" method="post">
+                        @csrf
+                        <input type="text" name="comment" id="comment">
+                        <input type="hidden" name="userid" value="{{\Illuminate\Support\Facades\Auth::id()}}">
+                        <input type="hidden" name="complainid" value="{{$data->id}}">
+                    </form>
+                </div>
                 @endforeach
-                @endif
-
-            {{------------------submit comment---------------------}}
-            <form action="{{route('comment')}}" method="post">
-                @csrf
-                <input type="text" name="comment" id="comment">
-                <input type="hidden" name="userid" value="{{\Illuminate\Support\Facades\Auth::id()}}">
-                <input type="hidden" name="complainid" value="{{$data->id}}">
-            </form>
-
-        </div>
-        @endforeach
-    </section>
+                
+                
+            </section>
 
     {{-------------------comment-----------------------}}
 

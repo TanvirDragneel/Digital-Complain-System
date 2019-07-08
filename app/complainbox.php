@@ -10,6 +10,7 @@ class complainbox extends Model
     {
         return $this->belongsTo(category::class);
     }
+    //every thing ok relation
 
 
     //

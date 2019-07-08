@@ -21,10 +21,15 @@ class judgepanelcontroller extends Controller
      */
     public function index()
     {
-        //
-        $cimplain_count = complainbox::all()->count();
         $id =Auth::id();
-        $complains = category::all()->where('user_id','=',$id);
+        $mycategory = category::all()->where('user_id','=',$id);
+        foreach ($mycategory as $my)
+        {
+            $category = $my['id'];
+        }
+        $cimplain_count = complainbox::all()->where('category_id','=',$category)->count();
+
+        $complains = complainbox::all()->where('category_id','=',$category);
 
         return view('judgepanel.all_complains',compact('complains'))->with('count',$cimplain_count);
     }

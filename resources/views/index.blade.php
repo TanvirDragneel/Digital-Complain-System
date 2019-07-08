@@ -127,6 +127,38 @@
                         @endif
                     </section>
 
+                    <section>
+                        <header class="major">
+                            <h2>Solved Complains</h2>
+                        </header>
+                        @if($cdatas->isEmpty())
+                            No Complain Found
+                            @else
+
+
+                        <div class="row">@foreach($cdatas as $data)
+                            <div class="col-4 col-6-medium col-12-small">
+                                <section class="box">
+                                    <a href="#" class="image featured"><img src="{{asset('images/pic01.jpg')}}" alt="" /></a>
+                                    <header>
+                                        <h3>{{$data['comp_title']}} </h3> <small>Category:: {{$data->category->comp_category}}</small>
+                                    </header>
+                                    <p style="text-align: justify;text-justify: inter-word;">
+                                        {{str_limit($data['comp_details'],100)}}
+                                    </p>
+                                    <footer>
+                                        <ul class="actions">
+                                            <li><a href="{{route('complain.show',[$data['id']])}}" class="button alt">Continue reading...</a></li>
+                                            <li>{{$data->judge_status == '0' ? 'Pending':'Solved'}}</li>
+                                        </ul>
+                                    </footer>
+                                </section>
+                            </div>@endforeach
+                        </div>
+
+                        @endif
+                    </section>
+
                 </div>
                 <div class="col-12">
 

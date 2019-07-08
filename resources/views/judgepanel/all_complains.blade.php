@@ -1,5 +1,7 @@
 @extends('layouts.master')
 @section('content')
+
+
     @if($count<0)
         <p>No complain found</p>
         @else

@@ -25,8 +25,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $complain_data_by_user = complainbox::all()->where('user_id','=',Auth::id())->sortBy('judge_status');
+        $complain_data_by_user = complainbox::all()->where('judge_status','=','0')->where('user_id','=',Auth::id());
+        $solvedtata = complainbox::all()->where('user_id','=',Auth::id())->where('judge_status','=',1)->sortBy('judge_status');
 
-        return view('index')->with('cdata',$complain_data_by_user);
+        return view('index')->with('cdata',$complain_data_by_user)->with('cdatas',$solvedtata);
     }
 }
